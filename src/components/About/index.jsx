@@ -104,9 +104,9 @@ export const About = ({ open }) => {
                     variant="body1"
                     gutterBottom
                   >
-                    Hello, I'm Francisco Weslley, I'm currently studying systems
+                    {`Hello, I'm Francisco Weslley, I'm currently studying systems
                     analysis and development, I'm a multiplatform full stack
-                    developer, I'm passionate about technology and innovation.
+                    developer, I'm passionate about technology and innovation.`}
                   </Typography>
                 </Grid>
               </Grid>
@@ -200,9 +200,9 @@ export const About = ({ open }) => {
                   variant="body1"
                   gutterBottom
                 >
-                  Hello, I'm Francisco Weslley, I'm currently studying systems
-                  analysis and development, I'm a multiplatform full stack
-                  developer, I'm passionate about technology and innovation.
+                  {`Hello, I'm Francisco Weslley, I'm currently studying systems
+                    analysis and development, I'm a multiplatform full stack
+                    developer, I'm passionate about technology and innovation.`}
                 </Typography>
               </Box>
             </Box>
