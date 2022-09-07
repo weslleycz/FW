@@ -1,16 +1,18 @@
 import useMediaQuery from "@mui/material/useMediaQuery";
+import Hamburger from "hamburger-react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../ assets/logo.svg";
-import Styles from "./styles.module.scss";
 import { useState } from "react";
-import Hamburger from 'hamburger-react'
+import logo from "../../ assets/logo.svg";
+import { MenuMobile } from "../MenuMobile";
+import Styles from "./styles.module.scss";
 
-export const Header = () => {
+export const Header = ({open}) => {
   const isWide = useMediaQuery("(min-width:600px)");
-  const [isOpen, setOpen] = useState(false)
   return isWide ? (
-    <header className={Styles.headerContainer}>
+    <>
+    {open?(<br></br>):(
+      <header className={Styles.headerContainer}>
       <div className={Styles.headerContent}>
         <Link href="#">
           <Image
@@ -23,8 +25,11 @@ export const Header = () => {
           ></Image>
         </Link>
         <nav>
-          <Link className={Styles.active} href="/">
+          <Link className={Styles.active} href="#home">
             Home
+          </Link>
+          <Link className={Styles.active} href="#about">
+            About
           </Link>
           <Link className={Styles.active} href="#skills">
             Skills
@@ -32,17 +37,16 @@ export const Header = () => {
           <Link className={Styles.active} href="#projects">
             Projects
           </Link>
-          <Link className={Styles.active} href="#">
-            Contact
-          </Link>
         </nav>
       </div>
     </header>
+    )}
+    </>
   ) : (
     <header className={Styles.headerContainer}>
       <div className={Styles.headerContent}>
         <div className={Styles.hamburger}>
-        <Hamburger size={20} toggled={isOpen} toggle={setOpen} />
+          <MenuMobile></MenuMobile>
         </div>
       </div>
     </header>

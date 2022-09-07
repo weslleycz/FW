@@ -11,7 +11,7 @@ export const Hero = () => {
   return (
     <>
       {matches ? (
-        <Box sx={{ width: "100%", marginTop: "2%", alignContent: "center" }}>
+        <Box id="home" sx={{ width: "100%", marginTop: "2%", alignContent: "center" }}>
           <Grid
             container
             sx={{
@@ -67,7 +67,7 @@ export const Hero = () => {
           </Grid>
         </Box>
       ) : (
-        <Box sx={{ width: "100%" }}>
+        <Box id="home" sx={{ width: "100%" }}>
           <Stack
             sx={{
               margin: "0 auto",

@@ -7,30 +7,8 @@ import Grid from "@mui/material/Unstable_Grid2";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { list } from "../../repositorios/list";
 import { useState } from "react";
-export const Skills = ({open,setOpen}) => {
+export const Skills = ({ open, setOpen }) => {
   const matches = useMediaQuery("(min-width:600px)");
-  const listMobile = [
-    {
-      item1: "javascript",
-      item2: "typescript",
-      item3: "bootstrap",
-    },
-    {
-      item1: "react",
-      item2: "nextjs",
-      item3: "sass",
-    },
-    {
-      item1: "postgresql",
-      item2: "nestjs",
-      item3: "mongodb",
-    },
-    {
-      item1: "docker",
-      item2: "firebase",
-      item3: "nodejs",
-    },
-  ];
 
   const handleClose = () => {
     setOpen(false);
@@ -55,7 +33,7 @@ export const Skills = ({open,setOpen}) => {
         sx={{
           color: "#fdfdfd",
           background:
-            "linear-gradient(108.46deg, rgba(255, 255, 255, 0.264) 0%, rgba(255, 255, 255, 0.066) 100%)",
+            "linear-gradient(108.46deg, rgba(241, 156, 156, 0.264) 0%, rgba(255, 255, 255, 0.066) 100%)",
           backdropFilter: "blur(20px)",
         }}
         open={open}
@@ -114,844 +92,759 @@ export const Skills = ({open,setOpen}) => {
           </Grid>
         </Card>
       </Backdrop>
-      <Box
-        sx={{
-          marginTop: "8%",
-        }}
-      >
-        <Typography
-          id="skills"
-          sx={{
-            margin: "0 auto",
-            textAlign: "center",
-            alignItems: "center",
-          }}
-          variant="h4"
-          gutterBottom
-        >
-          Skills
-        </Typography>
-        <Typography
-          sx={{
-            textAlign: "center",
-          }}
-          variant="subtitle1"
-          gutterBottom
-        >
-          Below is a brief list of my main tools and languages.
-        </Typography>
-      </Box>
       {matches ? (
         <>
           {open ? (
             ""
           ) : (
             <>
-            <div
-            >
-              <Stack
+              <Box
                 sx={{
-                  marginBlockEnd: "1%",
-                  margin: "0 auto",
-                  justifyContent: "center",
-                  alignItems: "center",
+                  marginTop: "8%",
                 }}
-                direction="row"
               >
-                <Card
-                  onClick={() => getCard(list[0])}
-                  variant="outlined"
+                <Typography
+                  id="skills"
                   sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                    margin: "0 auto",
                     textAlign: "center",
-                    justifyContent: "center",
-                    cursor: "pointer",
                     alignItems: "center",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                    margin: "1%",
                   }}
+                  variant="h4"
+                  gutterBottom
                 >
-                  <img
-                    src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
-                    }}
-                    alt={"javascript"}
-                  />
-                </Card>
-                <Card
-                  onClick={() => getCard(list[1])}
-                  variant="outlined"
+                  Skills
+                </Typography>
+                <Typography
                   sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    cursor: "pointer",
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
                     textAlign: "center",
+                  }}
+                  variant="subtitle1"
+                  gutterBottom
+                >
+                  Below is a brief list of my main tools and languages.
+                </Typography>
+              </Box>
+              <div>
+                <Stack
+                  sx={{
+                    marginBlockEnd: "1%",
+                    margin: "0 auto",
                     justifyContent: "center",
                     alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
                   }}
+                  direction="row"
                 >
-                  <img
-                    src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
+                  <Card
+                    onClick={() => getCard(list[0])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      minHeight: 100,
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      cursor: "pointer",
+                      alignItems: "center",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
+                      margin: "1%",
                     }}
-                    alt={"typescript"}
-                  />
-                </Card>
-                <Card
-                  variant="outlined"
-                  onClick={() => getCard(list[2])}
+                  >
+                    <img
+                      src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"javascript"}
+                    />
+                  </Card>
+                  <Card
+                    onClick={() => getCard(list[1])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      minHeight: 100,
+                      cursor: "pointer",
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
+                    }}
+                  >
+                    <img
+                      src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"typescript"}
+                    />
+                  </Card>
+                  <Card
+                    variant="outlined"
+                    onClick={() => getCard(list[2])}
+                    sx={{
+                      minWidth: 100,
+                      minHeight: 100,
+                      cursor: "pointer",
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
+                    }}
+                  >
+                    <img
+                      src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"bootstrap"}
+                    />
+                  </Card>
+                  <Card
+                    onClick={() => getCard(list[3])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      minHeight: 100,
+                      cursor: "pointer",
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
+                    }}
+                  >
+                    <img
+                      src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"react"}
+                    />
+                  </Card>
+                  <Card
+                    onClick={() => getCard(list[4])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      cursor: "pointer",
+                      minHeight: 100,
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
+                    }}
+                  >
+                    <img
+                      src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs-colored.svg`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"nextjs"}
+                    />
+                  </Card>
+                  <Card
+                    onClick={() => getCard(list[5])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      cursor: "pointer",
+                      minHeight: 100,
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
+                    }}
+                  >
+                    <img
+                      src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"sass"}
+                    />
+                  </Card>
+                </Stack>
+                <Stack
                   sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    cursor: "pointer",
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
+                    marginBlockEnd: "1%",
+                    margin: "0 auto",
                     justifyContent: "center",
                     alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
                   }}
+                  direction="row"
                 >
-                  <img
-                    src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
+                  <Card
+                    onClick={() => getCard(list[6])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      minHeight: 100,
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      cursor: "pointer",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
                     }}
-                    alt={"bootstrap"}
-                  />
-                </Card>
-                <Card
-                  onClick={() => getCard(list[3])}
-                  variant="outlined"
+                  >
+                    <img
+                      src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/postgresql-colored.svg`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"postgresql"}
+                    />
+                  </Card>
+                  <Card
+                    onClick={() => getCard(list[7])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      minHeight: 100,
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      cursor: "pointer",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
+                    }}
+                  >
+                    <img
+                      src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mongodb-colored.svg`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"mongodb"}
+                    />
+                  </Card>
+                  <Card
+                    onClick={() => getCard(list[8])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      minHeight: 100,
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      cursor: "pointer",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
+                    }}
+                  >
+                    <img
+                      src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"redis"}
+                    />
+                  </Card>
+                  <Card
+                    onClick={() => getCard(list[9])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      minHeight: 100,
+                      cursor: "pointer",
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
+                    }}
+                  >
+                    <img
+                      src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/firebase-colored.svg`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"firebase"}
+                    />
+                  </Card>
+                  <Card
+                    onClick={() => getCard(list[10])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      minHeight: 100,
+                      cursor: "pointer",
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
+                    }}
+                  >
+                    <img
+                      src={`https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/287/square_480/prismaHD.png`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"prisma"}
+                    />
+                  </Card>
+                  <Card
+                    onClick={() => getCard(list[11])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      minHeight: 100,
+                      cursor: "pointer",
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
+                    }}
+                  >
+                    <img
+                      src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"docker"}
+                    />
+                  </Card>
+                </Stack>
+                <Stack
                   sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    cursor: "pointer",
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
+                    marginBlockEnd: "1%",
+                    margin: "0 auto",
                     justifyContent: "center",
                     alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
                   }}
+                  direction="row"
                 >
-                  <img
-                    src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
+                  <Card
+                    onClick={() => getCard(list[12])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      minHeight: 100,
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      cursor: "pointer",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
                     }}
-                    alt={"react"}
-                  />
-                </Card>
-                <Card
-                  onClick={() => getCard(list[4])}
-                  variant="outlined"
+                  >
+                    <img
+                      src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"nodejs"}
+                    />
+                  </Card>
+                  <Card
+                    onClick={() => getCard(list[13])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      cursor: "pointer",
+                      minHeight: 100,
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
+                    }}
+                  >
+                    <img
+                      src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nestjs-colored.svg`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"nestjs"}
+                    />
+                  </Card>
+                  <Card
+                    onClick={() => getCard(list[14])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      cursor: "pointer",
+                      minHeight: 100,
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
+                    }}
+                  >
+                    <img
+                      src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/graphql-colored.svg`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"graphql"}
+                    />
+                  </Card>
+                  <Card
+                    onClick={() => getCard(list[15])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      minHeight: 100,
+                      cursor: "pointer",
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
+                    }}
+                  >
+                    <img
+                      src={`https://seeklogo.com/images/E/expo-logo-01BB2BCFC3-seeklogo.com.png`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"expo"}
+                    />
+                  </Card>
+                  <Card
+                    onClick={() => getCard(list[16])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      minHeight: 100,
+                      cursor: "pointer",
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
+                    }}
+                  >
+                    <img
+                      src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"ionic"}
+                    />
+                  </Card>
+                  <Card
+                    onClick={() => getCard(list[17])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      minHeight: 100,
+                      cursor: "pointer",
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
+                    }}
+                  >
+                    <img
+                      src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"electron"}
+                    />
+                  </Card>
+                </Stack>
+                <Stack
                   sx={{
-                    minWidth: 100,
-                    cursor: "pointer",
-                    minHeight: 100,
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
+                    marginBlockEnd: "1%",
+                    margin: "0 auto",
                     justifyContent: "center",
                     alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
                   }}
+                  direction="row"
                 >
-                  <img
-                    src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs-colored.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
+                  <Card
+                    onClick={() => getCard(list[18])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      cursor: "pointer",
+                      minHeight: 100,
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
                     }}
-                    alt={"nextjs"}
-                  />
-                </Card>
-                <Card
-                  onClick={() => getCard(list[5])}
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    cursor: "pointer",
-                    minHeight: 100,
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                  }}
-                >
-                  <img
-                    src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
+                  >
+                    <img
+                      src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"figma"}
+                    />
+                  </Card>
+                  <Card
+                    onClick={() => getCard(list[19])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      minHeight: 100,
+                      cursor: "pointer",
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
                     }}
-                    alt={"sass"}
-                  />
-                </Card>
-              </Stack>
-              <Stack
-                sx={{
-                  marginBlockEnd: "1%",
-                  margin: "0 auto",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                direction="row"
-              >
-                <Card
-                  onClick={() => getCard(list[6])}
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    cursor: "pointer",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                  }}
-                >
-                  <img
-                    src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/postgresql-colored.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
+                  >
+                    <img
+                      src={`https://icones.pro/wp-content/uploads/2021/06/icone-github-violet.png`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"github"}
+                    />
+                  </Card>
+                  <Card
+                    onClick={() => getCard(list[20])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      minHeight: 100,
+                      cursor: "pointer",
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
                     }}
-                    alt={"postgresql"}
-                  />
-                </Card>
-                <Card
-                  onClick={() => getCard(list[7])}
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    cursor: "pointer",
-                    alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                  }}
-                >
-                  <img
-                    src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mongodb-colored.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
+                  >
+                    <img
+                      src={`https://findicons.com/files/icons/2804/plex/512/inkscape.png`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"inkscape"}
+                    />
+                  </Card>
+                  <Card
+                    onClick={() => getCard(list[21])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      minHeight: 100,
+                      cursor: "pointer",
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
                     }}
-                    alt={"mongodb"}
-                  />
-                </Card>
-                <Card
-                  onClick={() => getCard(list[8])}
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    cursor: "pointer",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                  }}
-                >
-                  <img
-                    src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
+                  >
+                    <img
+                      src={`https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Android_Studio_Icon_3.6.svg/1900px-Android_Studio_Icon_3.6.svg.png`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"expo"}
+                    />
+                  </Card>
+                  <Card
+                    onClick={() => getCard(list[22])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      minHeight: 100,
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      cursor: "pointer",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
                     }}
-                    alt={"redis"}
-                  />
-                </Card>
-                <Card
-                  onClick={() => getCard(list[9])}
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    cursor: "pointer",
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                  }}
-                >
-                  <img
-                    src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/firebase-colored.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
+                  >
+                    <img
+                      src={`https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_200,h_200/https://api.charmhub.io/api/v1/media/download/charm_cMu7M9K6a65FsKZvrLZOZwyQradwbs7E_icon_5cef79c2d18f67464f39c8f2cf2d7ebb815b0071f04d3ffbb94f49fddd3ab666.png`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"portainer"}
+                    />
+                  </Card>
+                  <Card
+                    onClick={() => getCard(list[23])}
+                    variant="outlined"
+                    sx={{
+                      minWidth: 100,
+                      cursor: "pointer",
+                      minHeight: 100,
+                      background: "rgba(29, 31, 42, 0.5)",
+                      filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1%",
+                      ":hover": {
+                        background: "#eef5f8",
+                      },
                     }}
-                    alt={"firebase"}
-                  />
-                </Card>
-                <Card
-                  onClick={() => getCard(list[10])}
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    cursor: "pointer",
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                  }}
-                >
-                  <img
-                    src={`https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/287/square_480/prismaHD.png`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
-                    }}
-                    alt={"prisma"}
-                  />
-                </Card>
-                <Card
-                  onClick={() => getCard(list[11])}
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    cursor: "pointer",
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                  }}
-                >
-                  <img
-                    src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
-                    }}
-                    alt={"docker"}
-                  />
-                </Card>
-              </Stack>
-              <Stack
-                sx={{
-                  marginBlockEnd: "1%",
-                  margin: "0 auto",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                direction="row"
-              >
-                <Card
-                  onClick={() => getCard(list[12])}
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    cursor: "pointer",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                  }}
-                >
-                  <img
-                    src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
-                    }}
-                    alt={"nodejs"}
-                  />
-                </Card>
-                <Card
-                  onClick={() => getCard(list[13])}
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    cursor: "pointer",
-                    minHeight: 100,
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                  }}
-                >
-                  <img
-                    src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nestjs-colored.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
-                    }}
-                    alt={"nestjs"}
-                  />
-                </Card>
-                <Card
-                  onClick={() => getCard(list[14])}
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    cursor: "pointer",
-                    minHeight: 100,
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                  }}
-                >
-                  <img
-                    src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/graphql-colored.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
-                    }}
-                    alt={"graphql"}
-                  />
-                </Card>
-                <Card
-                  onClick={() => getCard(list[15])}
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    cursor: "pointer",
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                  }}
-                >
-                  <img
-                    src={`https://seeklogo.com/images/E/expo-logo-01BB2BCFC3-seeklogo.com.png`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
-                    }}
-                    alt={"expo"}
-                  />
-                </Card>
-                <Card
-                  onClick={() => getCard(list[16])}
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    cursor: "pointer",
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                  }}
-                >
-                  <img
-                    src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
-                    }}
-                    alt={"ionic"}
-                  />
-                </Card>
-                <Card
-                  onClick={() => getCard(list[17])}
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    cursor: "pointer",
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                  }}
-                >
-                  <img
-                    src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
-                    }}
-                    alt={"electron"}
-                  />
-                </Card>
-              </Stack>
-              <Stack
-                sx={{
-                  marginBlockEnd: "1%",
-                  margin: "0 auto",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                direction="row"
-              >
-                <Card
-                  onClick={() => getCard(list[18])}
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    cursor: "pointer",
-                    minHeight: 100,
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                  }}
-                >
-                  <img
-                    src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
-                    }}
-                    alt={"figma"}
-                  />
-                </Card>
-                <Card
-                   onClick={() => getCard(list[19])}
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    cursor: "pointer",
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                  }}
-                >
-                  <img
-                    src={`https://icones.pro/wp-content/uploads/2021/06/icone-github-violet.png`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
-                    }}
-                    alt={"github"}
-                  />
-                </Card>
-                <Card
-                onClick={() => getCard(list[20])}
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    cursor: "pointer",
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                  }}
-                >
-                  <img
-                    src={`https://findicons.com/files/icons/2804/plex/512/inkscape.png`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
-                    }}
-                    alt={"inkscape"}
-                  />
-                </Card>
-                <Card
-                  onClick={() => getCard(list[21])}
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    cursor: "pointer",
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                  }}
-                >
-                  <img
-                    src={`https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Android_Studio_Icon_3.6.svg/1900px-Android_Studio_Icon_3.6.svg.png`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
-                    }}
-                    alt={"expo"}
-                  />
-                </Card>
-                <Card
-                  onClick={() => getCard(list[22])}
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    cursor: "pointer",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                  }}
-                >
-                  <img
-                    src={`https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_200,h_200/https://api.charmhub.io/api/v1/media/download/charm_cMu7M9K6a65FsKZvrLZOZwyQradwbs7E_icon_5cef79c2d18f67464f39c8f2cf2d7ebb815b0071f04d3ffbb94f49fddd3ab666.png`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
-                    }}
-                    alt={"portainer"}
-                  />
-                </Card>
-                <Card
-                  onClick={() => getCard(list[23])}
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    cursor: "pointer",
-                    minHeight: 100,
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                    ":hover": {
-                      background: "#eef5f8",
-                    },
-                  }}
-                >
-                  <img
-                    src={`https://www.freepnglogos.com/uploads/linux-png/linux-tux-logo-png-transparent-svg-vector-bie-supply-14.png`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
-                    }}
-                    alt={"linux"}
-                  />
-                </Card>
-              </Stack>
+                  >
+                    <img
+                      src={`https://www.freepnglogos.com/uploads/linux-png/linux-tux-logo-png-transparent-svg-vector-bie-supply-14.png`}
+                      width="80"
+                      height="80"
+                      style={{
+                        marginTop: "10%",
+                      }}
+                      alt={"linux"}
+                    />
+                  </Card>
+                </Stack>
               </div>
             </>
           )}
         </>
       ) : (
-        listMobile.map((x) => {
-          return (
-            <>
-              <Stack
-                sx={{
-                  marginBlockEnd: "1%",
-                  margin: "0 auto",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                direction="row"
-              >
-                <Card
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                  }}
-                >
-                  <img
-                    src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${x.item1}/${x.item1}-original.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
-                    }}
-                    alt={x.item1}
-                  />
-                </Card>
-                <Card
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                  }}
-                >
-                  <img
-                    src={`https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/${x.item2}-colored.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
-                    }}
-                    alt={x.item2}
-                  />
-                </Card>
-
-                <Card
-                  variant="outlined"
-                  sx={{
-                    minWidth: 100,
-                    minHeight: 100,
-                    background: "rgba(29, 31, 42, 0.5)",
-                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-                    textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "1%",
-                  }}
-                >
-                  <img
-                    src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${x.item3}/${x.item3}-original.svg`}
-                    width="80"
-                    height="80"
-                    style={{
-                      marginTop: "10%",
-                    }}
-                    alt={x.item3}
-                  />
-                </Card>
-              </Stack>
-            </>
-          );
-        })
+        <>
+        </>
       )}
     </>
   );
