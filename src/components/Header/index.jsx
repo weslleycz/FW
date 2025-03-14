@@ -31,12 +31,6 @@ export const Header = ({open}) => {
           <Link className={Styles.active} href="#about">
             About
           </Link>
-          <Link className={Styles.active} href="#skills">
-            Skills
-          </Link>
-          <Link className={Styles.active} href="#projects">
-            Projects
-          </Link>
         </nav>
       </div>
     </header>

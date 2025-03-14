@@ -4,11 +4,8 @@ import Head from "next/head";
 import useKeypress from "react-use-keypress";
 import { About } from "../components/About";
 import { Hero } from "../components/Hero";
-import { Projects } from "../components/Projects";
-import { Skills } from "../components/Skills";
 export default function Home({open,setOpen}) {
   useKeypress(["Enter"], (event) => {
-    console.log(event.key);
     if (event.key === "Enter") {
       setOpen(false);
     }
@@ -32,9 +29,6 @@ export default function Home({open,setOpen}) {
           <About open={open}></About>
         </Container>
 
-      <Container maxWidth="md" sx={{ marginTop: 2, marginBottom: "auto" }}>
-        <Skills open={open} setOpen={setOpen}></Skills>
-      </Container>
       <Box
         id="projects"
         sx={{
@@ -43,9 +37,6 @@ export default function Home({open,setOpen}) {
           
         }}
       >
-        <Container maxWidth="md" sx={{ marginTop: 2, marginBottom: "auto" }}>
-          <Projects open={open} setOpen={setOpen}></Projects>
-        </Container>
       </Box>
       </Box>
     </>

@@ -39,7 +39,7 @@ export const MenuMobile = () => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["home", "about", "projects"].map((text, index) => (
+        {["home", "about",].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon></ListItemIcon>
